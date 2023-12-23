@@ -1,0 +1,29 @@
+if [ "$1" = "add" ] && [ "$2" != "" ]; then\n
+	cp "$installPath/default.json" "$installPath/workspaces/$2.json"\n
+	echo "workspace added, edit it with 'pj edit $2'"\n
+	exit\n
+fi\n
+if [ "$1" = "ls" ] ; then\n
+	ls "$installPath/workspaces/"\n
+	exit\n
+fi\n
+if [ "$1" = "edit" ] && [ "$2" != "" ]; then\n
+	nvim "$installPath/workspaces/$2.json" || vim "$installPath/workspaces/$2.json" || vi "$installPath/workspaces/$2.json"\n
+	exit\n
+fi\n
+if [ "$1" = "rm" ] && [ "$2" != "" ]; then\n\n
+	rm -f "$installPath/workspaces/$2.json"\n
+	exit\n
+fi\n
+if [ "$1" != "" ]; then\n
+file="$installPath/workspaces/$1.json"\n
+if test -f $file; then\n
+commands=$($installPath/bin/PiroJet $file ) \n
+cd $(echo $commands | cut -d ';' -f 1 )\n
+$SHELL -ic cd . &&$(echo $commands | cut -d ';' -f 2 ) && $SHELL\n
+else\n
+	echo workspace do not exist\n
+fi\n
+else\n
+	echo provide workspace name \n
+fi\n

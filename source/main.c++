@@ -4,9 +4,7 @@
 #include <nlohmann/json.hpp>
 #include <nlohmann/json_fwd.hpp>
 #include <string>
-// macro the check if json element existm, if not return a default value
-#define null_to_default(value, default_value)                                  \
-	(value.is_null() ? default_value : value) 
+// macro the check if json element exists, if not return a default value
 nlohmann::json read_json(std::string path){
 
 	std::string jsonPath;
@@ -31,9 +29,9 @@ nlohmann::json read_json(std::string path){
 }
 std::string generate_commands(const nlohmann::json workspace){
 	std::string commands="";  
-	commands += null_to_default(workspace["path"], ".");
+	commands += workspace["path"];
 	commands += ";";
-	commands += null_to_default(workspace["command"], "pwd");
+	commands += workspace["command"];
 	return commands;
 }
 int main(int argc, char *argv[])
