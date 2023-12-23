@@ -1,3 +1,6 @@
+
+![github](https://github.com/leggiand/PiroJet/assets/114882821/40c85c3b-c7b2-42e1-b8f6-958de1a56333)
+
 # PiroJet
 With PiroJet you can go where you want, when you want and how you want
 
@@ -72,7 +75,8 @@ pj workspace_name
 ```
 ## to the space
 ### adding PiroJet to spaceship
-![image](https://github.com/leggiand/PiroJet/assets/114882821/b071d408-df8c-49be-a387-f0d5f19b6e73)
+![image](https://github.com/leggiand/PiroJet/assets/114882821/096f96fd-635b-4d0a-a075-4468d61162a9)
+
 ```zsh
 mkdir "$ZSH_CUSTOM/plugins/pirojet"
 wget "https://github.com/leggiand/PiroJet/raw/main/spaceship/pirojet.plugin.zsh" -O "$ZSH_CUSTOM/plugins/pirojet/pirojet.plugin.zsh"
