@@ -20,7 +20,8 @@ file="$installPath/workspaces/$1.json"\n
 if test -f $file; then\n
 commands=$($installPath/bin/PiroJet $file ) \n
 cd $(echo $commands | cut -d ';' -f 1 )\n
-$SHELL -ic cd . &&$(echo $commands | cut -d ';' -f 2 ) && $SHELL\n
+$SHELL -ic cd . &&$(echo $commands | cut -d ';' -f 2 )&& export Piroject="$1" && $SHELL\n
+trap "unset Piroject" EXIT\n
 else\n
 	echo workspace do not exist\n
 fi\n
