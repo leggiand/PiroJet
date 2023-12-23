@@ -1,18 +1,41 @@
 # PiroJet
 With PiroJet you can go where you want, when you want and how you want
-## Installation
+
+---
+
+
+
+- **perpare the jet**
+  - [dependencies](#dependencies)
+  - [installation](#installation)
+- **take off**
+  - [adding a workspace](#adding-a-workspace)
+  - [editing a workspace](#editing-a-workspace)
+  - [removing a workspace](#removing-a-workspace)
+  - [listing workspace](#listing-workspace)
+  - [calling a workspace](#calling-a-workspace)
+- **to the space**
+  - [adding PiroJet to spaceship](#adding-pirojet-to-spaceship)
+ 
+---
+
+## prepare the jet
+### dependencies
+[nlhomann/json](https://github.com/nlohmann/json)
+### Installation
 ```bash
 git clone https://github.com/leggiand/PiroJet && cd PiroJet
 # if you want you can modify installation path in install.sh
 ./install.sh
 ```
-## usage
+
+## take off
 ### adding a workspace
 _a workspace is a json file used to tell PiroJet where to go and what to do_
 ```bash
 pj add workspace_name
 ```
-### editin a workspace
+### editing a workspace
 when creating a workspace, you will see this default template:
 ```json
 {
@@ -47,7 +70,8 @@ pj ls
 ```bash
 pj workspace_name
 ```
-## adding PiroJet to spaceship
+## to the space
+### adding PiroJet to spaceship
 ```zsh
 mkdir "$ZSH_CUSTOM/plugins/pirojet"
 wget "https://github.com/leggiand/PiroJet/raw/main/spaceship/pirojet.plugin.zsh" -O "$ZSH_CUSTOM/plugins/pirojet/pirojet.plugin.zsh"
