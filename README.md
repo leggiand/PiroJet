@@ -47,3 +47,11 @@ pj ls
 ```bash
 pj workspace_name
 ```
+## adding PiroJet to spaceship
+```zsh
+mkdir "$ZSH_CUSTOM/plugins/pirojet"
+wget "https://github.com/leggiand/PiroJet/raw/main/spaceship/pirojet.plugin.zsh" -O "$ZSH_CUSTOM/plugins/pirojet/pirojet.plugin.zsh"
+```
+then add pirojet to your plugins in .zshrc
+
+*now you can use the pirojet section in spaceship*
