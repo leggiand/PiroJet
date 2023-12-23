@@ -1,5 +1,5 @@
 # PiroJet
-A light project manager, to go where you want, when you want and how you want
+With PiroJet you can go where you want, when you want and how you want
 ## Installation
 ```bash
 git clone https://github.com/leggiand/PiroJet && cd PiroJet
