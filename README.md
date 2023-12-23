@@ -72,6 +72,7 @@ pj workspace_name
 ```
 ## to the space
 ### adding PiroJet to spaceship
+![image](https://github.com/leggiand/PiroJet/assets/114882821/b071d408-df8c-49be-a387-f0d5f19b6e73)
 ```zsh
 mkdir "$ZSH_CUSTOM/plugins/pirojet"
 wget "https://github.com/leggiand/PiroJet/raw/main/spaceship/pirojet.plugin.zsh" -O "$ZSH_CUSTOM/plugins/pirojet/pirojet.plugin.zsh"
