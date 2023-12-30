@@ -43,7 +43,9 @@ when creating a workspace, you will see this default template:
 ```json
 {
   "path":"",
-  "command":""
+  "command":"",
+  "_comment":"tmux options: 0=false, 1=true",
+  "tmux":""
 }
 ```
 you can edit this options to tell PiroJet what to do:
@@ -51,12 +53,13 @@ you can edit this options to tell PiroJet what to do:
 `path` 
 where to cd
 
-`what`
-command to execute after changing dir
+`command`
+what command to execute after changing dir
 
-```diff
-# in future more options will be added!!
-```
+`tmux`
+if you want to open the project in a tmux window
+- _every tmux window will be open in _pj_ session_
+
 
 
 ### removing a workspace
