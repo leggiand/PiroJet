@@ -1,6 +1,8 @@
 {
 	"path":"",
-	"command":""
+	"command":"",
+	"comment":"tmux option: 0=false, 1=true",
+	"tmux":"0"
 
 }
 

@@ -32,6 +32,8 @@ std::string generate_commands(const nlohmann::json workspace){
 	commands += workspace["path"];
 	commands += ";";
 	commands += workspace["command"];
+	commands += ";";
+	commands += workspace["tmux"];
 	return commands;
 }
 int main(int argc, char *argv[])

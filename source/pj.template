@@ -20,8 +20,15 @@ file="$installPath/workspaces/$1.json"\n
 if test -f $file; then\n
 commands=$($installPath/bin/PiroJet $file ) \n
 cd $(echo $commands | cut -d ';' -f 1 )\n
+tmux=$(echo $commands | cut -d ';' -f 3 )\n
+if [ "$tmux" != "1" ]; then\n
 $SHELL -ic cd . &&$(echo $commands | cut -d ';' -f 2 )&& export Piroject="$1" && $SHELL\n
 trap "unset Piroject" EXIT\n
+else\n
+tmux new-session -d -s pj -n $1 || $(tmux new-session -d -s pj tmux new-window -n $1 -t pj|| tmux new-window -a -n $1 -t pj)\n
+tmux send-keys -t pj:$1 "$(echo $commands | cut -d ';' -f 2 )&&export Piroject=\"$1\" && trap \"unset Piroject\" EXIT" Enter\n
+tmux attach -t pj:$1\n
+fi\n
 else\n
 	echo workspace do not exist\n
 fi\n
